@@ -1,9 +1,9 @@
 package com.iongroup.ldp.solution.implementations;
 
 import com.iongroup.ldp.solution.OrderItem;
-import com.iongroup.ldp.solution.interfaces.IPriceRule;
+import com.iongroup.ldp.solution.interfaces.PriceRule;
 
-public class EachPriceRule implements IPriceRule {
+public class EachPriceRule implements PriceRule {
   @Override
   public boolean isMatch(OrderItem orderItem) {
     return orderItem.getSku().startsWith("EACH");

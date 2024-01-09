@@ -1,9 +1,9 @@
 package com.iongroup.ldp.solution.fakes;
 
-import com.iongroup.ldp.solution.interfaces.IReservation;
+import com.iongroup.ldp.solution.interfaces.ReservationService;
 import com.iongroup.ldp.solution.model.Cart;
 
-public class FakeReservationService implements IReservation {
+public class FakeReservationService implements ReservationService {
   public boolean wasCalled = false;
 
   @Override

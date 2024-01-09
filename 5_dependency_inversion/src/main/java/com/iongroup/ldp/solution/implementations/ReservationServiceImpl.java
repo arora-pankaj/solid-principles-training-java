@@ -1,12 +1,12 @@
 package com.iongroup.ldp.solution.implementations;
 
-import com.iongroup.ldp.solution.interfaces.IReservation;
+import com.iongroup.ldp.solution.interfaces.ReservationService;
 import com.iongroup.ldp.solution.model.Cart;
 import com.iongroup.ldp.solution.model.OrderItem;
 import com.iongroup.ldp.solution.services.InventorySystem;
 import com.iongroup.ldp.solution.utility.Exceptions.InsufficientInventoryException;
 
-public class ReservationService implements IReservation {
+public class ReservationServiceImpl implements ReservationService {
   @Override
   public void reserveInventory(Cart cart) throws Exception {
     for (OrderItem item : cart.getItems()) {

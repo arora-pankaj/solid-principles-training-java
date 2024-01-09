@@ -25,8 +25,8 @@ public class NotificationServiceImpl implements NotificationService {
         message.setFrom(new InternetAddress("mail@example.com"));
         message.addRecipient(Message.RecipientType.TO, new InternetAddress(customerEmail));
 
-        message.setSubject("Your order placed on " + new Date().toString());
-        message.setText("Your order details: \n " + cart.toString());
+        message.setSubject("Your order placed on " + new Date());
+        message.setText("Your order details: \n " + cart);
 
         Transport.send(message);
         System.out.println("Message sent successfully.");

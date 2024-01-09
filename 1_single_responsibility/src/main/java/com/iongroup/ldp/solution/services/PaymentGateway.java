@@ -59,7 +59,7 @@ public class PaymentGateway {
     this.amountToCharge = amountToCharge;
   }
 
-  public void Charge() throws AvsMismatchException {}
+  public void charge() throws AvsMismatchException {}
 
-  public void Dispose() {}
+  public void dispose() {}
 }

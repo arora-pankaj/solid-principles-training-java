@@ -1,9 +1,9 @@
 package com.iongroup.ldp.solution.implementations;
 
 import com.iongroup.ldp.solution.OrderItem;
-import com.iongroup.ldp.solution.interfaces.IPriceRule;
+import com.iongroup.ldp.solution.interfaces.PriceRule;
 
-public class PerGramPriceRule implements IPriceRule {
+public class PerGramPriceRule implements PriceRule {
   @Override
   public boolean isMatch(OrderItem orderItem) {
     return orderItem.getSku().startsWith("WEIGHT");
@@ -11,6 +11,6 @@ public class PerGramPriceRule implements IPriceRule {
 
   @Override
   public float calculatePrice(OrderItem orderItem) {
-    return orderItem.getQuantity() * 6 / 1000;
+    return (float) (orderItem.getQuantity() * 6) / 1000;
   }
 }

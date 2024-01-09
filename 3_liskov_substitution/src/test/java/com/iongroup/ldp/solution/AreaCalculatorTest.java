@@ -27,12 +27,12 @@ public class AreaCalculatorTest {
 
   @Test
   public void CalculateIsSubstitutableForArea() {
-    List<Shape> shapes = new ArrayList<Shape>();
+    List<Shape> shapes = new ArrayList<>();
     shapes.add(new Square(3));
     shapes.add(new Rectangle(3, 4));
     shapes.add(new Triangle(3, 5));
 
-    ArrayList<Double> areas = new ArrayList<Double>();
+    ArrayList<Double> areas = new ArrayList<>();
     for (Shape shape : shapes) {
       areas.add(shape.area());
     }

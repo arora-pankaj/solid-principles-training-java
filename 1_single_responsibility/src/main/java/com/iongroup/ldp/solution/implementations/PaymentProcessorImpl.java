@@ -20,7 +20,7 @@ public class PaymentProcessorImpl implements PaymentProcessor {
       paymentGateway.nameOnCard = paymentDetails.getCardholderName();
       paymentGateway.amountToCharge = amount;
 
-      paymentGateway.Charge();
+      paymentGateway.charge();
     } catch (AvsMismatchException ex) {
       throw new OrderException(
           "The card gateway rejected the card based on the address provided.", ex);

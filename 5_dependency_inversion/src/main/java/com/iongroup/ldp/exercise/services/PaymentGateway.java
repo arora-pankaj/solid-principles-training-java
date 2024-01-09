@@ -64,6 +64,6 @@ public class PaymentGateway {
   }
 
   public void dispose() {
-    // TODO Dispose
+    // TODO dispose
   }
 }

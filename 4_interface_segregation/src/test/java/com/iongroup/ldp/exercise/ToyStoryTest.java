@@ -39,19 +39,19 @@ public class ToyStoryTest {
   }
 
   @Test
-  public void woodyFlyingException() throws NotImplementedException {
+  public void woodyFlyingException() {
     Throwable error = assertThrows(NotImplementedException.class, () -> woody.fly());
     assertEquals("The toy can't fly!", error.getMessage());
   }
 
   @Test
-  public void slinkyFlyingException() throws NotImplementedException {
+  public void slinkyFlyingException() {
     Throwable error = assertThrows(NotImplementedException.class, () -> slinky.fly());
     assertEquals("The toy can't fly!", error.getMessage());
   }
 
   @Test
-  public void slinkySpeakingException() throws NotImplementedException {
+  public void slinkySpeakingException() {
     Throwable error = assertThrows(NotImplementedException.class, () -> slinky.speak());
     assertEquals("The toy can't speak", error.getMessage());
   }

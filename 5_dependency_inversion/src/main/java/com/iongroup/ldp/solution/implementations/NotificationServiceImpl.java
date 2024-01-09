@@ -1,6 +1,6 @@
 package com.iongroup.ldp.solution.implementations;
 
-import com.iongroup.ldp.solution.interfaces.INotification;
+import com.iongroup.ldp.solution.interfaces.NotificationService;
 import com.iongroup.ldp.solution.model.Cart;
 import com.iongroup.ldp.solution.utility.Exceptions.OrderException;
 import java.util.Date;
@@ -11,7 +11,7 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-public class NotificationService implements INotification {
+public class NotificationServiceImpl implements NotificationService {
   @Override
   public void notifyCustomer(Cart cart) throws Exception {
     String customerEmail = cart.getCustomerEmail();
@@ -25,8 +25,8 @@ public class NotificationService implements INotification {
         message.setFrom(new InternetAddress("mail@example.com"));
         message.addRecipient(Message.RecipientType.TO, new InternetAddress(customerEmail));
 
-        message.setSubject("Your order placed on " + new Date().toString());
-        message.setText("Your order details: \n " + cart.toString());
+        message.setSubject("Your order placed on " + new Date());
+        message.setText("Your order details: \n " + cart);
 
         Transport.send(message);
         System.out.println("Message sent successfully.");

@@ -1,13 +1,13 @@
 package com.iongroup.ldp.solution.implementations;
 
-import com.iongroup.ldp.solution.interfaces.IPaymentProcess;
-import com.iongroup.ldp.solution.utility.Exceptions.OrderException;
+import com.iongroup.ldp.solution.interfaces.PaymentProcessService;
 import com.iongroup.ldp.solution.model.Cart;
 import com.iongroup.ldp.solution.model.PaymentDetails;
 import com.iongroup.ldp.solution.services.PaymentGateway;
 import com.iongroup.ldp.solution.utility.Exceptions.AvsMismatchException;
+import com.iongroup.ldp.solution.utility.Exceptions.OrderException;
 
-public class PaymentProcessService implements IPaymentProcess {
+public class PaymentProcessServiceImpl implements PaymentProcessService {
   @Override
   public void processPayment(PaymentDetails paymentDetails, Cart cart) throws Exception {
     PaymentGateway paymentGateway = new PaymentGateway();
@@ -20,7 +20,7 @@ public class PaymentProcessService implements IPaymentProcess {
       paymentGateway.nameOnCard = paymentDetails.getCardholderName();
       paymentGateway.amountToCharge = cart.getTotalAmount();
 
-      paymentGateway.Charge();
+      paymentGateway.charge();
     } catch (AvsMismatchException ex) {
       throw new AvsMismatchException(
           "The card gateway rejected the card based on the address provided.", ex);

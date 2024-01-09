@@ -41,8 +41,6 @@ public class ToyStoryTest {
     Toy woody = new SheriffWoody();
     woody.setPrice(217);
     woody.setColor("red");
-    ((SheriffWoody) woody).speak();
-    ((SheriffWoody) woody).move();
     assertEquals(woody.toString(), "The red Sheriff Woody toys's price is 217$");
   }
 }

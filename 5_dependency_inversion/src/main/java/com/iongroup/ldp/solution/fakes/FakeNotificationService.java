@@ -1,9 +1,9 @@
 package com.iongroup.ldp.solution.fakes;
 
-import com.iongroup.ldp.solution.interfaces.INotification;
+import com.iongroup.ldp.solution.interfaces.NotificationService;
 import com.iongroup.ldp.solution.model.Cart;
 
-public class FakeNotificationService implements INotification {
+public class FakeNotificationService implements NotificationService {
   public boolean wasCalled = false;
 
   @Override

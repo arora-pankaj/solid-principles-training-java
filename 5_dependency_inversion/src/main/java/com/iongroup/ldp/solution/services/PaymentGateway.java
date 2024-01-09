@@ -59,11 +59,11 @@ public class PaymentGateway {
     this.amountToCharge = amountToCharge;
   }
 
-  public void Charge() throws AvsMismatchException {
-    throw new AvsMismatchException("PaymentGateway Charge Not Implemented", null);
+  public void charge() throws AvsMismatchException {
+    throw new AvsMismatchException("PaymentGateway charge Not Implemented", null);
   }
 
-  public void Dispose() {
-    // TODO Dispose
+  public void dispose() {
+    // TODO dispose
   }
 }

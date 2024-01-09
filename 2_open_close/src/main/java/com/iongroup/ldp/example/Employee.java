@@ -2,24 +2,17 @@ package com.iongroup.ldp.example;
 
 public class Employee {
 
-  private int salary;
-  private int bonus;
-  private EmployeeType type;
+  private final int salary;
+  private final int bonus;
+  private final EmployeeType employeeType;
 
-  Employee(int salary, int bonus, EmployeeType type) {
+  Employee(int salary, int bonus, EmployeeType employeeType) {
     this.salary = salary;
     this.bonus = bonus;
-    this.type = type;
+    this.employeeType = employeeType;
   }
 
   public int payAmount() {
-    switch (this.type) {
-      case ENGINEER:
-        return salary;
-      case MANAGER:
-        return salary + bonus;
-      default:
-        return 0;
-    }
+    return employeeType.calculateSalary(salary, bonus);
   }
 }

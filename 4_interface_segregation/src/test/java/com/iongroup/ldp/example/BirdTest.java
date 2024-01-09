@@ -8,7 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class BirdTest {
-  private ByteArrayOutputStream consoleContent = new ByteArrayOutputStream();
+  private final ByteArrayOutputStream consoleContent = new ByteArrayOutputStream();
   private final Bird bird = new Bird();
 
   @BeforeEach

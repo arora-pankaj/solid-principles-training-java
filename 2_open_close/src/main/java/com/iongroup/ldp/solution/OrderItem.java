@@ -2,8 +2,8 @@ package com.iongroup.ldp.solution;
 
 public class OrderItem {
 
-  private String sku;
-  private int quantity;
+  private final String sku;
+  private final int quantity;
 
   public OrderItem(String sku, int quantity) {
     this.sku = sku;

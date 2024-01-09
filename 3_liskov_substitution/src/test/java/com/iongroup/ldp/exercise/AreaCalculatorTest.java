@@ -1,7 +1,8 @@
-package com.iongroup.ldp.exercise.regular;
+package com.iongroup.ldp.exercise;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class AreaCalculatorTest {
@@ -9,7 +10,7 @@ public class AreaCalculatorTest {
   public void CalculateSquareArea() {
     Square square = new Square();
     square.setWidth(2);
-    assertEquals(4, AreaCalculator.CalculateArea(square));
+    Assertions.assertEquals(4, AreaCalculator.CalculateArea(square));
   }
 
   @Test

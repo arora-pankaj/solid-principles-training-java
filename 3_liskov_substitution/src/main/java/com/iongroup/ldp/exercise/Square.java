@@ -1,4 +1,4 @@
-package com.iongroup.ldp.exercise.regular;
+package com.iongroup.ldp.exercise;
 
 public class Square extends Rectangle {
   @Override
